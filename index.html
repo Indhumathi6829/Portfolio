@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var stored = window.localStorage.getItem('portfolio-theme');
+          var theme = stored === 'light' || stored === 'dark'
+            ? stored
+            : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.classList.toggle('light', theme === 'light');
+          document.documentElement.style.colorScheme = theme;
+        } catch (error) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#04070f" />
+    <meta
+      name="description"
+      content="Portfolio of Indhumathi Selvakumar, an AI and software developer building intelligent systems, full-stack applications and computer vision solutions."
+    />
+    <meta name="keywords" content="Indhumathi Selvakumar, AI developer, software engineer, full stack developer, React, Spring Boot, machine learning, computer vision" />
+    <meta name="author" content="Indhumathi Selvakumar" />
+    <meta property="og:title" content="Indhumathi Selvakumar | AI & Software Developer" />
+    <meta property="og:description" content="Building intelligent solutions and engineering tomorrow through AI, software engineering and full-stack development." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Indhumathi Selvakumar | AI & Software Developer</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Indhumathi Selvakumar",
+        "jobTitle": "AI & Software Developer",
+        "email": "mailto:indhu26102006@gmail.com",
+        "url": "https://github.com/Indhumathi6829",
+        "sameAs": [
+          "https://github.com/Indhumathi6829",
+          "https://www.linkedin.com/in/indhumathi-s-794439403/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
